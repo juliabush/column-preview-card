@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    /* Fonts */
+    --font-style-title: 'Big Shoulders Display';
+    --font-style-rest: 'Lexend Deca';
+
+    --fw-title: 700;
+    --fw-rest: 400;
+
+    --font-size: 0.938rem;
+
+    /* Colors */
+    --clr-paragraphs-semi-white:  hsla(0, 0%, 100%, 0.75);
+    --clr-background-heading-button-grey: hsl(0, 0%, 95%);
+    --clr-card-1-orange: hsl(31, 77%, 52%);
+    --clr-card-2-blue:  hsl(184, 100%, 22%);
+    --clr-card-3-darkblue:  hsl(179, 100%, 13%);
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  html, body {
+    height: 100%;
+    background-color: var(--clr-background-heading-button-grey);
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    font-size: var(--font-size);
+    color: var(--clr-paragraphs-semi-white);
+    font-family: var(--font-style-rest);
+  }
+  .product-columns__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-style-title);
+    font-size: 2rem;
+    color: white;
+  }
+  .column * {
+    margin: 7rem;
+  }
+  .product-columns__column-1 {
+    background-color: var(--clr-card-1-orange);
+  }
+  .product-columns__column-2 {
+    background-color: var(--clr-card-2-blue);
+  }
+  .product-columns__column-3 {
+    background-color: var(--clr-card-3-darkblue);
+  }
